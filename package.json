@@ -8,6 +8,8 @@
     "@testing-library/react": "^16.3.0",
     "@testing-library/user-event": "^13.5.0",
     "components": "^0.1.0",
+    "firebase": "^12.4.0",
+    "firebase-tools": "^14.20.0",
     "react": "^19.2.0",
     "react-dom": "^19.2.0",
     "react-router-dom": "^5.3.4",

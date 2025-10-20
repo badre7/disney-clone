@@ -1,6 +1,21 @@
 import styled from 'styled-components';
+import { signInWithPopup } from "firebase/auth";
+import { auth, provider } from "./firebase";
+
+const handleAuth = () => {
+  signInWithPopup(auth, provider)
+    .then((result) => {
+      console.log("Gebruiker ingelogd:", result.user);
+    })
+    .catch((error) => {
+      console.error("Fout bij inloggen:", error);
+    });
+};
+
+
 
 const Header = (props) => {
+
   return (
     <Nav>
       <Logo>
@@ -32,7 +47,7 @@ const Header = (props) => {
           <span>SERIES</span>
         </a>
       </NavMenu>
-      <Login>login</Login>
+      <Login onClick={handleAuth}>Login</Login>
     </Nav>
   );
 };
